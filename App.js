@@ -13,6 +13,10 @@ export default function App() {
 		let r = parseFloat(valor1) + parseFloat(valor2);
 		setResultado(r);
 	}
+	function multiplicar(){
+		let r = parseFloat(valor1) * parseFloat(valor2);
+		setResultado(r);
+	}
 	
   function lerNome(){
 	  setNome(nomeTxt);
@@ -60,8 +64,15 @@ export default function App() {
 		  </view>
 		  
 		  <view style={styles.bloco}>
+		  	<TouchableOpacity style={styles.botao} onPress={multiplicar}>
+				  <Text style={styles.txtBotao}>multiplicar</Text>
+			  </TouchableOpacity>
+		  </view>
+		  
+		  <view style={styles.bloco}>
 	  			<Text style={styles.label}> Resultado: {resultado}</Text>
 	  		</view>
+		  
 		</View>
 	  
   );
