@@ -13,8 +13,16 @@ export default function App() {
 		let r = parseFloat(valor1) + parseFloat(valor2);
 		setResultado(r);
 	}
+	function subtrair (){
+		let r = parseFloat(valor1) - parseFloat(valor2);
+		setResultado(r);
+	}
 	function multiplicar(){
 		let r = parseFloat(valor1) * parseFloat(valor2);
+		setResultado(r);
+	}
+	function dividir(){
+		let r =parseFloat(valor1) / parseFloat(valor2);
 		setResultado(r);
 	}
 	
@@ -64,8 +72,20 @@ export default function App() {
 		  </view>
 		  
 		  <view style={styles.bloco}>
+		  	<TouchableOpacity style={styles.botao} onPress={subtrair}>
+				  <Text style={styles.txtBotao}>Subtrair</Text>
+			  </TouchableOpacity>
+		  </view>
+		  
+		  <view style={styles.bloco}>
 		  	<TouchableOpacity style={styles.botao} onPress={multiplicar}>
 				  <Text style={styles.txtBotao}>multiplicar</Text>
+			  </TouchableOpacity>
+		  </view>
+		  
+		  <view style={styles.bloco}>
+		  	<TouchableOpacity style={styles.botao} onPress={dividir}>
+				  <Text style={styles.txtBotao}>Dividir</Text>
 			  </TouchableOpacity>
 		  </view>
 		  
